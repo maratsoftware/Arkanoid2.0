@@ -1,0 +1,13 @@
+:root {
+  --red-color: #d52600;
+  --blue-color: #0070e8;
+  --green-color: #7acd0b;
+  --orange-color: #f99736;
+  --pink-color: #f972b1;
+  --grey-color: #b9b9ba;
+  --light-grey-color: #f7f7f7;
+}
+
+.game__page {
+  display: none;
+}

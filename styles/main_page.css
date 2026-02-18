@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "arkanoid";
+  src: url("/fonts/Arka_solid.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "old-school";
+  src: url("/fonts/Old-school.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "old-school";
+  color: #ffffff;
+}
+
+body {
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 1400px;
+}
+
+.main__page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score {
+  font-size: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  box-sizing: border-box;
+  padding-top: 2rem;
+  cursor: auto;
+}
+
+.score__current {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2.5rem;
+}
+
+.score__global {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2.5rem;
+}
+
+.score__title {
+  color: #d42800;
+}
+
+.game__title {
+  position: relative;
+}
+
+.game__title-lattice {
+  position: absolute;
+  top: 33px;
+  right: 212px;
+}
+
+.game__title-line {
+  position: absolute;
+  background-color: #e97bf2;
+}
+
+.horizontal {
+  height: 4px;
+}
+
+.vertical {
+  width: 4px;
+}
+
+.line-one {
+  width: 60px;
+  top: 20px;
+}
+
+.line-two {
+  width: 40px;
+  top: 34px;
+  left: 10px;
+}
+
+.line-three {
+  width: 40px;
+  top: 6px;
+  left: 10px;
+}
+
+.line-four {
+  height: 44px;
+  left: 20px;
+}
+
+.line-five {
+  height: 44px;
+  left: 35px;
+}
+
+.line-six {
+  height: 24px;
+  left: 4px;
+  top: 10px;
+}
+
+.line-seven {
+  height: 24px;
+  left: 52px;
+  top: 10px;
+}
+
+.game__title-text {
+  font-family: "arkanoid";
+  font-size: 7rem;
+  background: linear-gradient(
+    to bottom,
+    #24188a 0% 55%,
+    #e97bf2 55% 65%,
+    #ffffff 65% 100%
+  );
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  letter-spacing: 0.3rem;
+}
+
+.game__start__button {
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.game__start__button:hover::before {
+  content: "▶";
+  color: white;
+  top: -10%;
+  left: -20%;
+  position: absolute;
+}
+
+.authors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.autors__company {
+  font-size: 5.5rem;
+  color: #d42800;
+}
+
+.autors__copyright {
+  font-size: 2.5rem;
+  line-height: 5rem;
+  text-align: center;
+}
+
+@keyframes colorswith {
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: transparent;
+  }
+}
