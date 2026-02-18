@@ -19,7 +19,7 @@
 </head>
 <body>
 	<main>
-		<div class="menu">
+		<div class="menu" id="main-menu">
 			<header class="score">
 				<div class="score__current">
 					<p class="score__title" aria-label="Текущий рекорд">1UP</p>
@@ -27,7 +27,7 @@
 				</div>
 				<div class="score__global" aria-label="Максимальный рекорд">
 					<p class="score__title">HIGH SCORE</p>
-					<p>50000</p>
+					<p id="final-score">00</p>
 				</div>
 			</header>
 			<span class="game__title">
@@ -42,7 +42,7 @@
 					<div class="game__title-line vertical-line line-seven"></div>
 				</div>
 			</span>
-			<button class="game__start__button" onclick="startGame()">1 PLAYER</button>
+			<button class="game__start__button" id="start-button">1 PLAYER</button>
 			<section class="authors">
 				<p class="autors__company">TAITO</p>
 				<p class="autors__copyright">
@@ -52,7 +52,7 @@
 				</p>
 			</section>
 		</div>
-		<div class="game">
+		<div class="game" id="game-screen">
 			<div class="game__canvas__field">
 				<canvas id="game-canvas" width="700" height="900"></canvas>
 				<div class="game__canvas_field-bullets" aria-hidden="true">
@@ -122,31 +122,32 @@
 				<section class="game__info__score">
 					<div class="game__info__score__high">
 						<p class="game__info__score-title">HIGH SCORE</p>
-						<p class="game__info__score-number">50000</p>
+						<p class="game__info__score-number" id="final-score">00</p>
 					</div>
 					<div class="game__info__score__current">
-						<p class="game__info__score-title">1UP</p>
-						<p class="game__info__score-number">8000</p>
+						<p class="game__info__score-title" id="score-current">1UP</p>
+						<p class="game__info__score-number" id="score">00</p>
 					</div>
 				</section>
 				<section class="game__info__lives">
-
+					<p class="lives__title">LIVES</p>
+					<span>0</span>
 				</section>
 				<section class="round__info">
 					<p class="round__info-title">Round</p>
-					<span>1</span>
+					<span>0</span>
 				</section>
 			</aside>
 		</div>
-		<div class="final">
+		<div class="final" id="final-screen">
 			<header class="score">
 				<div class="score__current">
 					<p class="score__title" aria-label="Текущий рекорд">1UP</p>
-					<p>600000</p>
+					<p id="score">00</p>
 				</div>
 				<div class="score__global" aria-label="Максимальный рекорд">
 					<p class="score__title">HIGH SCORE</p>
-					<p>50000</p>
+					<p id="final-score">00</p>
 				</div>
 			</header>
 			<section class="final__titles">
@@ -160,7 +161,7 @@
 					BUT THE REAL VOYAGE OF "ARKANOID" IN THE GALAXY HAS ONLY STARTED......
 				</p>
 			</section>
-			<button class="back__button" onclick="backToMenu()">BACK TO MAIN MENU</button>
+			<button class="back__button" id="back-button">BACK TO MAIN MENU</button>
 		</div>
 	</main>
 	<script src="/scripts/script.js"></script>

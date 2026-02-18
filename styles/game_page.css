@@ -1,6 +1,6 @@
 .game {
   height: 100vh;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: end;
   flex-direction: row;
@@ -148,6 +148,21 @@
   justify-self: flex-end;
 }
 
+#score-current {
+  animation: blink 0.5s linear alternate infinite;
+}
+
+.game__info__lives {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.lives__title {
+  color: var(--red-color);
+}
+
 .round__info {
   display: flex;
   flex-direction: column;
@@ -157,4 +172,19 @@
 
 .round__info-title {
   color: var(--red-color);
+}
+
+@keyframes blink {
+  0% {
+    color: var(--red-color);
+  }
+  49% {
+    color: var(--red-color);
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: transparent;
+  }
 }
