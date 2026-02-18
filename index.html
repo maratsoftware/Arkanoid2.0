@@ -11,13 +11,15 @@
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="/">
 	<meta property="og:image" content="/images/ogimage.jpg">
-	<link rel="stylesheet" href="/styles/main_page.css">
+	<link rel="stylesheet" href="/styles/global.css">
+	<link rel="stylesheet" href="/styles/menu_page.css">
 	<link rel="stylesheet" href="/styles/game_page.css">
+	<link rel="stylesheet" href="/styles/final_page.css">
 	<link rel="icon" href="/images/Arkanoid-logo.png" type="image/png">
 </head>
 <body>
 	<main>
-		<div class="main__page">
+		<div class="menu">
 			<header class="score">
 				<div class="score__current">
 					<p class="score__title" aria-label="Текущий рекорд">1UP</p>
@@ -31,13 +33,13 @@
 			<span class="game__title">
 				<h1 class="game__title-text">ARKANOID</h1>
 				<div class="game__title-lattice" aria-hidden="true">
-					<div class="game__title-line horizontal line-one"></div>
-					<div class="game__title-line horizontal line-two"></div>
-					<div class="game__title-line horizontal line-three"></div>
-					<div class="game__title-line vertical line-four"></div>
-					<div class="game__title-line vertical line-five"></div>
-					<div class="game__title-line vertical line-six"></div>
-					<div class="game__title-line vertical line-seven"></div>
+					<div class="game__title-line horizontal-line line-one"></div>
+					<div class="game__title-line horizontal-line line-two"></div>
+					<div class="game__title-line horizontal-line line-three"></div>
+					<div class="game__title-line vertical-line line-four"></div>
+					<div class="game__title-line vertical-line line-five"></div>
+					<div class="game__title-line vertical-line line-six"></div>
+					<div class="game__title-line vertical-line line-seven"></div>
 				</div>
 			</span>
 			<button class="game__start__button" onclick="startGame()">1 PLAYER</button>
@@ -50,8 +52,115 @@
 				</p>
 			</section>
 		</div>
-		<div class="game__page">
-			<canvas id="gameCanvas" width="400" height="600"></canvas>
+		<div class="game">
+			<div class="game__canvas__field">
+				<canvas id="game-canvas" width="700" height="900"></canvas>
+				<div class="game__canvas_field-bullets" aria-hidden="true">
+					<div class="game__canvas_field-bullet bullet-one">
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+					</div>
+					<div class="game__canvas_field-bullet bullet-two">
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+					</div>
+					<div class="game__canvas_field-bullet bullet-three">
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+					</div>
+					<div class="game__canvas_field-bullet bullet-four">
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+					</div>
+					<div class="game__canvas_field-bullet bullet-five">
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+					</div>
+					<div class="game__canvas_field-bullet bullet-six">
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+					</div>
+					<div class="game__canvas_field-bullet bullet-seven">
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+					</div>
+					<div class="game__canvas_field-bullet bullet-eight">
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+					</div>
+					<div class="game__canvas_field-bullet bullet-nine bullet-horizontal">
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+					</div>
+					<div class="game__canvas_field-bullet bullet-ten bullet-horizontal">
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+						<div class="bullet__edge"></div>
+					</div>
+				</div>
+			</div>
+			<aside class="game__info">
+				<section class="game__info__score">
+					<div class="game__info__score__high">
+						<p class="game__info__score-title">HIGH SCORE</p>
+						<p class="game__info__score-number">50000</p>
+					</div>
+					<div class="game__info__score__current">
+						<p class="game__info__score-title">1UP</p>
+						<p class="game__info__score-number">8000</p>
+					</div>
+				</section>
+				<section class="game__info__lives">
+
+				</section>
+				<section class="round__info">
+					<p class="round__info-title">Round</p>
+					<span>1</span>
+				</section>
+			</aside>
+		</div>
+		<div class="final">
+			<header class="score">
+				<div class="score__current">
+					<p class="score__title" aria-label="Текущий рекорд">1UP</p>
+					<p>600000</p>
+				</div>
+				<div class="score__global" aria-label="Максимальный рекорд">
+					<p class="score__title">HIGH SCORE</p>
+					<p>50000</p>
+				</div>
+			</header>
+			<section class="final__titles">
+				<p class="final__titles-text">
+					DIMENTION-CONTROLLING FORT "DOH" HAS NOW BEEN DEMOLISHED, AND TIME STARTED FLOWING REVERSLY. 
+				</p>
+				<p class="final__titles-text">
+					"VAUS" MANAGED TO ESCAPE FROM THE DISTORTED SPACE.
+				</p>
+				<p class="final__titles-text">
+					BUT THE REAL VOYAGE OF "ARKANOID" IN THE GALAXY HAS ONLY STARTED......
+				</p>
+			</section>
+			<button class="back__button" onclick="backToMenu()">BACK TO MAIN MENU</button>
 		</div>
 	</main>
 	<script src="/scripts/script.js"></script>

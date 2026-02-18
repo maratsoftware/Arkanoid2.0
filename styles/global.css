@@ -1,0 +1,40 @@
+:root {
+  --red-color: #d52600;
+  --blue-color: #0070e8;
+  --green-color: #7acd0b;
+  --orange-color: #f99736;
+  --pink-color: #e97bf2;
+  --grey-color: #b0b0b1;
+  --light-grey-color: #f7f7f7;
+  --white-color: #ffffff;
+  --dark-blue-color: #24188a;
+}
+
+@font-face {
+  font-family: "arkanoid";
+  src: url("/fonts/Arka_solid.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "old-school";
+  src: url("/fonts/Old-school.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "old-school";
+  color: #ffffff;
+}
+
+body {
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 1200px;
+}

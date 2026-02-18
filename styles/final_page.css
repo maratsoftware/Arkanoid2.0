@@ -1,0 +1,48 @@
+.final {
+  height: 100vh;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.final__titles {
+  width: 1000px;
+}
+
+.final__titles-text {
+  font-size: 2rem;
+  line-height: 4rem;
+  padding-bottom: 2rem;
+}
+
+.back__button {
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  animation: backbutton 1s linear alternate infinite;
+}
+
+.back__button:hover::before {
+  content: "▶";
+  color: var(--white-color);
+  top: -10%;
+  left: -10%;
+  position: absolute;
+}
+
+.back__button:hover {
+  animation: none;
+}
+
+@keyframes backbutton {
+  from {
+    color: var(--white-color);
+  }
+  to {
+    color: transparent;
+  }
+}
